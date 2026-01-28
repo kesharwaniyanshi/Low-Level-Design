@@ -1,4 +1,4 @@
-package TicTacToeGame;
+package LLD.TicTacToeGame;
 
 public class XWonState implements GameState {
     @Override
