@@ -1,6 +1,6 @@
-package LLD.TicTacToeGame;
+package TicTacToeGame;
 
 public interface BoardGames {
-
+    
     void play();
 } 

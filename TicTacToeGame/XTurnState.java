@@ -1,4 +1,4 @@
-package LLD.TicTacToeGame;
+package TicTacToeGame;
 
 public class XTurnState implements GameState {
     @Override
