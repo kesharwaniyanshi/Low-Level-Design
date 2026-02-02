@@ -7,6 +7,7 @@ private String name;
     
     public Player(String name, boolean isWhiteSide) {
         this.name = name;
+        this.isWhiteSide = isWhiteSide;
     }
     
     public String getName() {

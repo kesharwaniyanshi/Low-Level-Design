@@ -52,4 +52,44 @@ public class Board {
             board[row][j] = new Cell(row, j, PieceFactory.createPiece("pawn", isWhite));
         }
     }
+    
+    public Cell getCell(int row, int col) {
+        if (row >= 0 && row < board.length && col >= 0 && col < board.length) {
+            return board[row][col];
+        }
+        return null;
+    }
+    
+    public Cell[][] getBoard() {
+        return board;
+    }
+    
+    public void displayBoard() {
+        System.out.println("\n  0 1 2 3 4 5 6 7");
+        for (int i = 0; i < board.length; i++) {
+            System.out.print(i + " ");
+            for (int j = 0; j < board[i].length; j++) {
+                Piece piece = board[i][j].getPiece();
+                if (piece == null) {
+                    System.out.print(". ");
+                } else {
+                    System.out.print(getPieceSymbol(piece) + " ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+    
+    private String getPieceSymbol(Piece piece) {
+        String symbol = "";
+        if (piece instanceof King) symbol = "K";
+        else if (piece instanceof Queen) symbol = "Q";
+        else if (piece instanceof Rook) symbol = "R";
+        else if (piece instanceof Bishop) symbol = "B";
+        else if (piece instanceof Knight) symbol = "N";
+        else if (piece instanceof Pawn) symbol = "P";
+        
+        return piece.isWhite() ? symbol : symbol.toLowerCase();
+    }
 }

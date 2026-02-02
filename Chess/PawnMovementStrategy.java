@@ -5,10 +5,10 @@ public class PawnMovementStrategy implements MovementStrategy {
     @Override
     public boolean canMove(Board board, Cell startCell, Cell endCell) {
         int direction = startCell.getPiece().isWhite() ? 1 : -1;
-        int startRow = startCell.row;
-        int startCol = startCell.col;
-        int endRow = endCell.row;
-        int endCol = endCell.col;
+        int startRow = startCell.getRow();
+        int startCol = startCell.getCol();
+        int endRow = endCell.getRow();
+        int endCol = endCell.getCol();
 
         // Standard one-square move
         if (endCol == startCol && endRow == startRow + direction && endCell.getPiece() == null) {
