@@ -1,7 +1,5 @@
 package InventoryManagementSystem;
 
-import InventoryManagementSystem.Product;
-
 public class ProductFactory {
     public Product createProduct(String name, double price, int quantity, String sku, ProductCategory category, int threshold) {
         switch (category) {

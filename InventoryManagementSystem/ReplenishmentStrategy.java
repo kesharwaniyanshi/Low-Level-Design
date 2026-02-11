@@ -1,4 +1,4 @@
 package InventoryManagementSystem;
-public interface ReplenishStrategy {
+public interface ReplenishmentStrategy {
     void replenish(Product product);
 }
