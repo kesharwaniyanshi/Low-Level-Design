@@ -34,7 +34,11 @@ public class TicTacToeGame implements BoardGames {
 
 
   private void switchPlayer() {
-    currentPlayer = (currentPlayer == playerX) ? playerO : playerX;
+    if (currentPlayer == playerX) {
+      currentPlayer = playerO;
+    } else {
+      currentPlayer = playerX;
+    }
   }
   // Displays the outcome of the game based on the final game state.
   private void announceResult() {

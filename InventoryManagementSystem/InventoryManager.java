@@ -15,6 +15,7 @@ public class InventoryManager {
     // strategy
     warehouses = new ArrayList<>();
     productFactory = new ProductFactory();
+    observers = new ArrayList<>();
   }
 
   public static synchronized InventoryManager getInstance() {
